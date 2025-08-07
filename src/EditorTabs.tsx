@@ -2,8 +2,9 @@ import { useState } from "react";
 import TinyCDN from "./editors/TinyCDN";
 import ToastCDN from "./editors/ToastCDN";
 import EditorJSCDN from "./editors/EditorjsCDN";
+import ToastEditor from "./editors/ToastEditor";
 
-const tabs = ["tiny", "toast", "editorjs"] as const;
+const tabs = ["tiny", "toast", "editorjs", "toasteditor"] as const;
 type TabType = (typeof tabs)[number];
 
 export default function EditorTabs() {
@@ -31,6 +32,7 @@ export default function EditorTabs() {
         {selectedTab === "tiny" && <TinyCDN key="tiny" />}
         {selectedTab === "toast" && <ToastCDN key="toast" />}
         {selectedTab === "editorjs" && <EditorJSCDN key="editorjs" />}
+        {selectedTab === "toasteditor" && <ToastEditor key="toasteditor" />}
       </div>
     </div>
   );

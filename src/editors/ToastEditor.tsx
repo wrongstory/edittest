@@ -1,7 +1,10 @@
 import { useEffect, useRef } from "react";
 import Editor from "@toast-ui/editor";
-import colorSyntax from "@toast-ui/editor-plugin-color-syntax";
 import "@toast-ui/editor/dist/toastui-editor.css";
+
+import "tui-color-picker/dist/tui-color-picker.css";
+import "@toast-ui/editor-plugin-color-syntax/dist/toastui-editor-plugin-color-syntax.css";
+import colorSyntax from "@toast-ui/editor-plugin-color-syntax";
 
 type EditorOptions = ConstructorParameters<typeof Editor>[0];
 
